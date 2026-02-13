@@ -1,2 +1,5 @@
-# Paraparamiko
-Paraparamiko extends Paramiko with OpenSSH config features for automation. It provides structured ProxyJump resolution, Include and Match parsing, deterministic multi-hop Transport construction, and authentication via multiple methods. It focuses on correct config expansion and reproducible SSH transport stacks without modifying Paramiko internals.
+Paraparamiko provides deterministic ProxyJump resolution and multi-hop `Transport` construction for Paramiko, driven directly by the OpenSSH client configuration of the user. It implements structured `Include` and `Match` parsing, explicit hop-by-hop authentication orchestration and strict host key verification to prevent accepting unknown or untrusted hosts. It focuses on predictable transport stacks and controlled SSH behavior without modifying Paramiko internals.
+
+It integrates with Bitwarden and KeePassXC for credential retrieval, enabling automated handling of password, keyboard-interactive and 2FA flows. It supports agent-based authentication and direct key loading, including passphrase-protected and unprotected keys, resolving authentication methods per hop based on configuration and available credentials.
+
+Stretch goals include X11 forwarding and related channel management features.
